@@ -13,7 +13,7 @@ FROM python:3.10-slim
 
 WORKDIR /app 
 
-COPY --from=builder /install /usr/local 
+COPY --from=builder /install /usr/local  
 
 COPY . .   
 

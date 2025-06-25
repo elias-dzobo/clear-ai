@@ -26,9 +26,6 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                   context: .
-                  file: /Dockerfile
-                  platforms: linux/amd64,linux/arm64
                   push: true
                   tags: |
-                      elias-dzobo/githubactions:latest
-                      elias-dzobo/githubactions:${{ github.run_number }}
+                      nonfungibledev/clear-ai:1.1

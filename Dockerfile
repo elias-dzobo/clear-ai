@@ -17,6 +17,8 @@ COPY --from=builder /install /usr/local
 
 COPY . .   
 
+COPY opik.config /app/opik.config
+
 COPY start.sh /app/start.sh 
 RUN chmod +x /app/start.sh
 

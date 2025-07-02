@@ -14,7 +14,7 @@ from opik import track
 #internal
 from schema.main import *
 
-load_dotenv() 
+load_dotenv()  
 
 
 groq_api_key = os.environ.get("GROQ_API_KEY")
@@ -22,7 +22,11 @@ groq_api_key = os.environ.get("GROQ_API_KEY")
 if not groq_api_key:
     raise RuntimeError('Groq API Key not found')
 
-opik.configure()
+opik.configure(
+    api_key=os.environ.get("OPIK_API_KEY"),
+    workspace=os.environ.get("OPIK_WORKSPACE"),
+    use_local=False
+)
     
 
 @track
